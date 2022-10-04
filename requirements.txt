@@ -1,0 +1,10 @@
+python-telegram-bot
+pytz
+openpyxl
+unidecode
+flask
+flask_session
+pygithub
+gunicorn
+telethon
+pillow
