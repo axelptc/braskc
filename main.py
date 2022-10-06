@@ -11,7 +11,7 @@ def sondage(context:CallbackContext):
 updater = Updater('5672453377:AAER_0xzOwUs8hVcKyEb_l-xcte6Y_16oVg', use_context=True)
 bot = updater.bot
 j = updater.job_queue
-j.run_repeating(sondage, interval=timedelta(minutes=1), first=datetime(2022,10,6,14,55))
+j.run_repeating(sondage, interval=timedelta(days=7), first=datetime(2022,10,6,15,14))
 updater.start_polling()
 
 
