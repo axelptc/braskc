@@ -11,7 +11,7 @@ def sondage(context:CallbackContext):
 updater = Updater('5672453377:AAER_0xzOwUs8hVcKyEb_l-xcte6Y_16oVg', use_context=True)
 bot = updater.bot
 j = updater.job_queue
-j.run_daliy(sondage, time(15,27,0))
+j.run_daily(sondage, time(15,28,0))
 updater.start_polling()
 
 
