@@ -10,7 +10,7 @@ def sondage(context:CallbackContext):
 
 def job(update,context):
     j = updater.job_queue
-    j.run_daily(sondage, time(13,28,0))
+    j.run_daily(sondage, time(13,31,0))
 
 updater = Updater('5672453377:AAER_0xzOwUs8hVcKyEb_l-xcte6Y_16oVg', use_context=True)
 bot = updater.bot
