@@ -8,10 +8,13 @@ def sondage(context:CallbackContext):
     options = ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche','Pas là', 'Sydney Govou']
     bot.send_poll(1953752060, 'Five cette semaine', options, False, allows_multiple_answers=True )
 
-updater = Updater('5672453377:AAER_0xzOwUs8hVcKyEb_l-xcte6Y_16oVg', use_context=True)
+def job(update,context):
+    j = updater.job_queue
+    j.run_daily(sondage, time(13,26,0))
+
+updater = Updater('5672453377:AAER_0xzOwUs8hVcKyEb_l-xcte6Y_16oVg', use_context=True, pass_job_queue=True)
 bot = updater.bot
-j = updater.job_queue
-j.run_daily(sondage, time(3,36,0))
+updater.dispatcher.add_handler(MessageHandler(Filters.update, job))
 updater.start_polling()
 
 
