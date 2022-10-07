@@ -10,11 +10,11 @@ def sondage(context:CallbackContext):
 
 def job(update,context):
     j = updater.job_queue
-    j.run_daily(sondage, time(13,26,0))
+    j.run_daily(sondage, time(13,28,0))
 
-updater = Updater('5672453377:AAER_0xzOwUs8hVcKyEb_l-xcte6Y_16oVg', use_context=True, pass_job_queue=True)
+updater = Updater('5672453377:AAER_0xzOwUs8hVcKyEb_l-xcte6Y_16oVg', use_context=True)
 bot = updater.bot
-updater.dispatcher.add_handler(MessageHandler(Filters.update, job))
+updater.dispatcher.add_handler(MessageHandler(Filters.update, job, pass_job_queue=True))
 updater.start_polling()
 
 
