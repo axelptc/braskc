@@ -5,7 +5,7 @@ from datetime import*
 from pytz import timezone
 
 def sondage(context:CallbackContext):
-    options = ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche','Pas là', 'Sydney Govou']
+    options = ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche','Pas là', 'Sidney Govou']
     bot.send_poll(-1001165380533, 'Five cette semaine', options, False, allows_multiple_answers=True )
 
 def test(context:CallbackContext):
